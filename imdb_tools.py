@@ -95,7 +95,7 @@ def tmdb_get_movies(config_path, plex, data):
     for mid in t_movs:  # For each TMBd ID in TMBd Collection
         match = False
         for m in p_m_map:  # For each movie in Plex
-            if "tt" not in p_m_map[m] is not "None":  # If the Plex movie's guid does not start with tt
+            if "tt" not in p_m_map[m] != "None":  # If the Plex movie's guid does not start with tt
                 if int(p_m_map[m]) == int(mid):
                     match = True
                     break
