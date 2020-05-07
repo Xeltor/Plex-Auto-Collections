@@ -138,8 +138,7 @@ def update_from_config(config_path, plex, skip_radarr=False):
                             method_name = "TMDb"
                         print("{} missing movies from {} List: {}".format(len(missing), method_name, v))
                         if not skip_radarr:
-                            if input("Add missing movies to Radarr? (y/n): ").upper() == "Y":
-                                add_to_radarr(config_path, missing)
+                            add_to_radarr(config_path, missing)
                     elif libtype == "show":
                         if "trakt" in m:
                             method_name = "Trakt"
